@@ -15,6 +15,7 @@ namespace BackgroundServiceWithChannel.Controllers
 
         private async Task EnviarEmailAsync(string email)
         {
+            await Task.Delay(5000);
             await Task.Run(() => logger.LogInformation("E-mail enviado para {email}", email));
         }
     }
